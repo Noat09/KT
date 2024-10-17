@@ -33,10 +33,8 @@ public class LoginForm extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         txtUsername1 = new javax.swing.JTextField();
         txtPass1 = new javax.swing.JPasswordField();
-        jCheckBox2 = new javax.swing.JCheckBox();
         txtLogin1 = new javax.swing.JButton();
         btnShowPass = new javax.swing.JButton();
-        btnForgetPass = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 102, 255));
@@ -63,14 +61,6 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBox2.setText("Remember me?");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
-
         txtLogin1.setBackground(new java.awt.Color(0, 0, 0));
         txtLogin1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtLogin1.setForeground(new java.awt.Color(255, 255, 255));
@@ -84,15 +74,9 @@ public class LoginForm extends javax.swing.JFrame {
         btnShowPass.setBackground(new java.awt.Color(102, 102, 255));
         btnShowPass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/hide.png"))); // NOI18N
         btnShowPass.setBorder(null);
-
-        btnForgetPass.setBackground(new java.awt.Color(102, 102, 255));
-        btnForgetPass.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 12)); // NOI18N
-        btnForgetPass.setForeground(new java.awt.Color(255, 255, 255));
-        btnForgetPass.setText("Forget Password ?");
-        btnForgetPass.setBorder(null);
-        btnForgetPass.addActionListener(new java.awt.event.ActionListener() {
+        btnShowPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnForgetPassActionPerformed(evt);
+                btnShowPassActionPerformed(evt);
             }
         });
 
@@ -101,17 +85,15 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnShowPass)
-                .addGap(64, 64, 64))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnShowPass, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(167, 167, 167)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnForgetPass, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(txtLogin1)
-                        .addComponent(jLabel4)))
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtLogin1)
+                    .addComponent(jLabel4))
+                .addContainerGap(184, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(55, 55, 55)
@@ -121,7 +103,6 @@ public class LoginForm extends javax.swing.JFrame {
                     .addGap(29, 29, 29)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(txtUsername1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jCheckBox2)
                         .addComponent(txtPass1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(55, Short.MAX_VALUE)))
         );
@@ -134,9 +115,7 @@ public class LoginForm extends javax.swing.JFrame {
                 .addComponent(btnShowPass)
                 .addGap(56, 56, 56)
                 .addComponent(txtLogin1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnForgetPass)
-                .addGap(28, 28, 28))
+                .addGap(50, 50, 50))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(106, 106, 106)
@@ -147,9 +126,7 @@ public class LoginForm extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtPass1, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(jCheckBox2)
-                    .addContainerGap(104, Short.MAX_VALUE)))
+                    .addContainerGap(136, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -171,10 +148,6 @@ public class LoginForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsername1ActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
-
     private void txtLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLogin1ActionPerformed
         String taikhoan = txtUsername1.getText();
         String matkhau = txtPass1.getText();
@@ -193,17 +166,28 @@ public class LoginForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtLogin1ActionPerformed
 
-    private void btnForgetPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnForgetPassActionPerformed
-        
-    }//GEN-LAST:event_btnForgetPassActionPerformed
-
     private void txtPass1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPass1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPass1ActionPerformed
-public void clearForm() {
+
+    private void btnShowPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowPassActionPerformed
+        hienThiMK();
+    }//GEN-LAST:event_btnShowPassActionPerformed
+
+    public void clearForm() {
         
         txtUsername1.setText("");
         txtPass1.setText("");
+    }
+int count = 0;
+public void hienThiMK() {
+        if (count == 0) {
+            txtPass1.setEchoChar((char) 0);     
+            count = 1;
+        } else if (count == 1) {
+            txtPass1.setEchoChar('*');
+            count = 0;
+        }
     }
     /**
      * @param args the command line arguments
@@ -241,9 +225,7 @@ public void clearForm() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnForgetPass;
     private javax.swing.JButton btnShowPass;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
